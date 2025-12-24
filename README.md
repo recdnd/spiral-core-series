@@ -22,6 +22,27 @@ Core capabilities:
 
 ---
 
+## Quickstart
+
+Requirements: Python 3.10+
+
+Run the latest prototype:
+
+```bash
+python versions/spiral_core_v046_frontier-recent-k-fix.py
+Expected output (example):
+
+History size: ... (append-only)
+
+== View: LAST_12 ==
+
+== View: FRONTIER_RECENT_K_FIXED ... ==
+
+Invariant: no deletions, no edits. Only new events.
+```
+
+---
+
 ## Why It Exists
 
 Event streams accumulate fast. Naive sliding windows drop causal context. Simple ranking loses explainability.
