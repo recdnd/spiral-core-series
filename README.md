@@ -24,13 +24,13 @@ Core capabilities:
 
 ## Quickstart
 
-Requirements: Python 3.10+
-
-Run the latest prototype:
+**Requirements:** Python 3.10+
 
 ```bash
-python versions/spiral_core_v046_frontier-recent-k-fix.py
-Expected output (example):
+git clone https://github.com/recdnd/spiral-core-series.git
+cd spiral-core-series
+python3 versions/spiral_core_v046_frontier-recent-k-fix.py
+Expected output (shape):
 
 History size: ... (append-only)
 
