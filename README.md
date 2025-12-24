@@ -116,12 +116,12 @@ spiral-core-series/
 
 ## Quickstart
 
-**Requirements**: Python 3.10+ (3.9 usually works too). No external dependencies.
-
-**Run the latest prototype (v0.46)**:
+**Requirements:** Python 3.10+ (and `make`)
 
 ```bash
-python versions/v0.046/spiral_core_v046_frontier-recent-k-fix.py
+git clone https://github.com/recdnd/spiral-core-series.git
+cd spiral-core-series
+make run
 ```
 
 **Expected output**:
