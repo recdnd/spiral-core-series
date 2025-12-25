@@ -43,6 +43,15 @@ Invariant: no deletions, no edits. Only new events.
 
 ---
 
+## Cite / Attribution
+
+If you build on **RECENT_A (trace-closure frontier)** or the **conflict-pair binding** rule, attribution is appreciated:
+
+- Concept + prototype: **recdnd/spiral-core-series**
+- Spec: `docs/A-Mode Frontier(RECENT-A) — Clean Spec.md`
+
+---
+
 ## Why It Exists
 
 Event streams accumulate fast. Naive sliding windows drop causal context. Simple ranking loses explainability.
