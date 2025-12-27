@@ -218,7 +218,7 @@ For detailed changelog across v0.39 → v0.46, see [`docs/spiral_core_series_SUM
 
 ## License
 
-Apache-2.0 recommended for open prototyping.
+Apache-2.0.
 
 ---
 
