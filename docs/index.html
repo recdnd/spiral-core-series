@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>spiral-core-series</title>
+</head>
+<body>
+  <h1>spiral-core-series</h1>
+  <p>
+    A minimal, append-only event history core for Spiral.
+    RECENT_A trace-closure frontier over an event DAG, with conflict-pair bound signals + invariants.
+  </p>
+
+  <p>
+    <a href="https://github.com/recdnd/spiral-core-series">GitHub Repo</a>
+    ·
+    <a href="https://github.com/recdnd/spiral-core-series/releases">Releases</a>
+    ·
+    <a href="https://github.com/recdnd/spiral-core-series/blob/main/docs/SPEC_RECENT_A.md">Spec (RECENT_A)</a>
+  </p>
+
+  <h2>Quickstart</h2>
+  <pre><code>python versions/spiral_core_v046_frontier-recent-k-fix.py</code></pre>
+
+  <h2>Highlights</h2>
+  <ul>
+    <li><b>RECENT_A</b>: minimal causally-closed subgraph from last K events + reactive explainers (observe/noise/repair).</li>
+    <li><b>Strong binding</b>: conflict signals attributable to a concrete conflict input pair via <code>parent_ids</code>.</li>
+    <li><b>Invariants</b>: append-only (no edits/deletes) + parents=conflict_pair checks.</li>
+  </ul>
+
+  <h2>Docs</h2>
+  <ul>
+    <li><a href="./ABSTRACT.md">ABSTRACT</a></li>
+    <li><a href="./SPEC_RECENT_A.md">SPEC_RECENT_A</a></li>
+    <li><a href="./WHITEPAPER.md">WHITEPAPER</a></li>
+    <li><a href="../CHANGELOG.md">CHANGELOG</a></li>
+  </ul>
+
+  <hr />
+  <p>License: Apache-2.0 · © Rec</p>
+</body>
+</html>
+
