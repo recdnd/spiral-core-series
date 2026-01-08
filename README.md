@@ -210,7 +210,9 @@ For detailed changelog across v0.39 → v0.46, see [`docs/spiral_core_series_SUM
 
 ## Documentation
 
-- **Formal spec**: [`docs/A-Mode-Frontier-RECENT-A-Clean-Spec.md`](docs/A-Mode-Frontier-RECENT-A-Clean-Spec.md) — RECENT_A trace-closure definition.
+- **Technical Whitepaper**: [`docs/TECHNICAL_WHITEPAPER.md`](docs/TECHNICAL_WHITEPAPER.md) — Complete technical overview (v0.02 → v0.46), design principles, and strong binding rule.
+- **Abstract Definition**: [`docs/A-Mode-Frontier-Abstract-Definition.md`](docs/A-Mode-Frontier-Abstract-Definition.md) — Intuitive definition and conceptual framework of RECENT_A.
+- **Formal spec**: [`docs/A-Mode-Frontier-RECENT-A-Clean-Spec.md`](docs/A-Mode-Frontier-RECENT-A-Clean-Spec.md) — RECENT_A trace-closure mathematical definition.
 - **Changelog**: [`docs/spiral_core_series_SUMMARY_v039_to_v046.md`](docs/spiral_core_series_SUMMARY_v039_to_v046.md) — Version arc notes (v0.39 → v0.46).
 - **v0.46 README**: [`versions/v0.046/README.md`](versions/v0.046/README.md) — Latest version details.
 
