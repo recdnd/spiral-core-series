@@ -2,7 +2,11 @@
 
 **Spiral Core v0.46**
 
-This document provides an abstract, intuitive definition of the A-Mode Frontier. For the formal mathematical specification, see [`A-Mode-Frontier-RECENT-A-Clean-Spec.md`](A-Mode-Frontier-RECENT-A-Clean-Spec.md).
+This document provides an abstract, intuitive definition of the A-Mode Frontier.
+
+**See also**:
+- Formal spec: [`SPEC_RECENT_A.md`](SPEC_RECENT_A.md)
+- Engineering narrative: [`WHITEPAPER.md`](WHITEPAPER.md)
 
 ---
 
@@ -217,7 +221,7 @@ This is the intersection of three system paradigms:
 
 ## 10. Relationship to Formal Spec
 
-This abstract definition complements the formal mathematical specification in [`A-Mode-Frontier-RECENT-A-Clean-Spec.md`](A-Mode-Frontier-RECENT-A-Clean-Spec.md):
+This abstract definition complements the formal mathematical specification in [`SPEC_RECENT_A.md`](SPEC_RECENT_A.md):
 
 - **This document**: Intuitive understanding, conceptual framework, design rationale.
 - **Formal spec**: Mathematical precision, proofs, implementation constraints.
@@ -227,6 +231,6 @@ Together, they provide both the "why" and the "how" of RECENT_A.
 ---
 
 **See also**:
-- [`TECHNICAL_WHITEPAPER.md`](TECHNICAL_WHITEPAPER.md) — Complete technical overview.
-- [`spiral_core_series_SUMMARY_v039_to_v046.md`](spiral_core_series_SUMMARY_v039_to_v046.md) — Implementation evolution.
+- [`WHITEPAPER.md`](WHITEPAPER.md) — Complete technical overview.
+- [`CHANGELOG.md`](../CHANGELOG.md) — Implementation evolution.
 

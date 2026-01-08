@@ -1,7 +1,7 @@
 # Spiral Core Series — Technical Whitepaper
 
 **Version**: v0.46  
-**Date**: 2024  
+**Date**: 2024–2025  
 **Status**: Prototype Series (v0.02 → v0.46)
 
 ---
@@ -56,6 +56,8 @@ Event streams accumulate rapidly. Traditional approaches face two critical limit
 ---
 
 ## 3. Evolution: v0.02 → v0.46
+
+For the detailed v0.39 → v0.46 arc, see [`CHANGELOG.md`](../CHANGELOG.md).
 
 ### 3.1 Early Versions (v0.02 - v0.38)
 
@@ -130,7 +132,7 @@ RECENT_A is defined as:
 
 **Proof sketch**: Sliding window is purely time-based (only truncates). RECENT_A is causal-based (can pull older ancestors back in, and pull in bound reactive events). Therefore they cannot be equivalent in general.
 
-**Engineering counterexample**: See [`A-Mode-Frontier-RECENT-A-Clean-Spec.md`](A-Mode-Frontier-RECENT-A-Clean-Spec.md) for a detailed example with K=2.
+**Engineering counterexample**: See [`SPEC_RECENT_A.md`](SPEC_RECENT_A.md) for a detailed example with K=2.
 
 ---
 
@@ -282,8 +284,8 @@ noise   score=1.000 p=2 parents=[7fe7d9f2,7d75addb] [conflict(2)] | NOISE:...
 
 ## 10. References
 
-- **Formal Spec**: [`A-Mode-Frontier-RECENT-A-Clean-Spec.md`](A-Mode-Frontier-RECENT-A-Clean-Spec.md) — Complete mathematical definition of RECENT_A.
-- **Changelog**: [`spiral_core_series_SUMMARY_v039_to_v046.md`](spiral_core_series_SUMMARY_v039_to_v046.md) — Detailed version arc (v0.39 → v0.46).
+- **Formal Spec**: [`SPEC_RECENT_A.md`](SPEC_RECENT_A.md) — Complete mathematical definition of RECENT_A.
+- **Changelog**: [`CHANGELOG.md`](../CHANGELOG.md) — Detailed version arc (v0.39 → v0.46).
 - **Latest Version**: [`../versions/v0.046/README.md`](../versions/v0.046/README.md) — v0.46 implementation details.
 
 ---

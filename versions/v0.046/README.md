@@ -122,5 +122,5 @@ This yields a compact but causally coherent “recent explainability view”.
 
 ## Related docs (repo root)
 
-- `A-Mode Frontier(RECENT-A) — Clean Spec.md` — formal definition of RECENT_A / trace-closure
-- `spiral_core_series_SUMMARY_v039_to_v046.md` — patch history notes (v0.39 → v0.46)
+- [`../../docs/SPEC_RECENT_A.md`](../../docs/SPEC_RECENT_A.md) — formal definition of RECENT_A / trace-closure
+- [`../../CHANGELOG.md`](../../CHANGELOG.md) — patch history notes (v0.39 → v0.46)

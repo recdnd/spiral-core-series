@@ -20,6 +20,28 @@ Core capabilities:
 - View projection (`frontier`) that surfaces relevant nodes while preserving causality.
 - Strong binding rule: derived events must be attributable to a concrete input pair ("conflict pair").
 
+**Notation**: `parent_ids` (code) == `parents` (discussion) == `P_e` (spec).
+
+---
+
+## What Problem It Solves / What's Novel
+
+Event streams accumulate fast. Traditional approaches face two critical limitations:
+
+1. **Sliding windows** drop causal context when truncating by time.
+2. **Score-based ranking** loses explainability when events are selected by importance alone.
+
+**RECENT_A is not a sliding window.** It defines "recent context" not as a temporal window, but as the minimal causally closed subgraph necessary to explain the system's latest behavior.
+
+---
+
+## Docs
+
+- **Concept / intuition**: [`docs/ABSTRACT.md`](docs/ABSTRACT.md)
+- **Formal spec**: [`docs/SPEC_RECENT_A.md`](docs/SPEC_RECENT_A.md)
+- **Engineering narrative**: [`docs/WHITEPAPER.md`](docs/WHITEPAPER.md)
+- **Version arc**: [`CHANGELOG.md`](CHANGELOG.md)
+
 ---
 
 ## Quickstart
@@ -48,7 +70,7 @@ Invariant: no deletions, no edits. Only new events.
 If you build on **RECENT_A (trace-closure frontier)** or the **conflict-pair binding** rule, attribution is appreciated:
 
 - Concept + prototype: **recdnd/spiral-core-series**
-- Spec: `docs/A-Mode Frontier(RECENT-A) — Clean Spec.md`
+- Spec: [`docs/SPEC_RECENT_A.md`](docs/SPEC_RECENT_A.md)
 
 ---
 
@@ -94,7 +116,7 @@ Components:
 - **Downward closure**: Include reactive explainers (observe/noise/repair) that reference kept nodes.
 - **Ranking is orthogonal**: `trace_score` sorts the view, it does not decide membership.
 
-**Formal spec**: See [`docs/A-Mode-Frontier-RECENT-A-Clean-Spec.md`](docs/A-Mode-Frontier-RECENT-A-Clean-Spec.md).
+**Formal spec**: See [`docs/SPEC_RECENT_A.md`](docs/SPEC_RECENT_A.md).
 
 ---
 
@@ -106,8 +128,10 @@ spiral-core-series/
 ├── .gitignore
 ├── spiral_core.py              # Minimal core (optional reference)
 ├── docs/
-│   ├── A-Mode-Frontier-RECENT-A-Clean-Spec.md
-│   └── spiral_core_series_SUMMARY_v039_to_v046.md
+│   ├── ABSTRACT.md
+│   ├── SPEC_RECENT_A.md
+│   └── WHITEPAPER.md
+├── CHANGELOG.md
 └── versions/
     ├── v0.02/
     │   └── spiral_core_v02.py
@@ -142,6 +166,27 @@ make run
 - `Invariant: ...` — must pass (strong binding checks).
 
 Parents are printed as `parents=[deadbeef,feedcafe]` (first 8 chars) for causality visibility.
+
+### Minimal Demo
+
+```bash
+$ make run
+
+History size: 66 (append-only)
+
+== View: LAST_12 ==
+1766567425207 da65d94eaa729bd2 noise score=1.000 p=2 parents=[a391db30,7c0f834e] [conflict(2)] | NOISE:...
+1766567425206 48717d1805cebf8e observe score=0.998 p=2 parents=[a391db30,7c0f834e] | observe=conflict_heat; ...
+1766567425205 7e9a83747106e6f5 input score=0.996 p=1 parents=[9bb7b51c] | repair: summarize; topic=y
+...
+
+== View: FRONTIER_RECENT_K_FIXED top20 (ranked by trace_score) ==
+...
+
+Invariant: no deletions, no edits. Only new events.
+```
+
+The `parents=[...]` field makes "why is this event here?" answerable by inspection.
 
 ---
 
@@ -204,17 +249,13 @@ Each event has:
 - **v0.46** (current): Parents printing + strong binding + invariants. ✅
 - **v0.47+** (future): Conflict pair selection policy pluggability, deterministic replay, compact export (JSONL).
 
-For detailed changelog across v0.39 → v0.46, see [`docs/spiral_core_series_SUMMARY_v039_to_v046.md`](docs/spiral_core_series_SUMMARY_v039_to_v046.md).
+For detailed changelog across v0.39 → v0.46, see [`CHANGELOG.md`](CHANGELOG.md).
 
 ---
 
-## Documentation
+## Additional Resources
 
-- **Technical Whitepaper**: [`docs/TECHNICAL_WHITEPAPER.md`](docs/TECHNICAL_WHITEPAPER.md) — Complete technical overview (v0.02 → v0.46), design principles, and strong binding rule.
-- **Abstract Definition**: [`docs/A-Mode-Frontier-Abstract-Definition.md`](docs/A-Mode-Frontier-Abstract-Definition.md) — Intuitive definition and conceptual framework of RECENT_A.
-- **Formal spec**: [`docs/A-Mode-Frontier-RECENT-A-Clean-Spec.md`](docs/A-Mode-Frontier-RECENT-A-Clean-Spec.md) — RECENT_A trace-closure mathematical definition.
-- **Changelog**: [`docs/spiral_core_series_SUMMARY_v039_to_v046.md`](docs/spiral_core_series_SUMMARY_v039_to_v046.md) — Version arc notes (v0.39 → v0.46).
-- **v0.46 README**: [`versions/v0.046/README.md`](versions/v0.046/README.md) — Latest version details.
+- **v0.46 README**: [`versions/v0.046/README.md`](versions/v0.046/README.md) — Latest version implementation details.
 
 ---
 

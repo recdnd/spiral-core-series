@@ -1,5 +1,11 @@
 ## A-Mode Frontier (RECENT_A) — Clean Spec
 
+**Context**:
+- Concept / intuition: [`ABSTRACT.md`](ABSTRACT.md)
+- Engineering narrative: [`WHITEPAPER.md`](WHITEPAPER.md)
+
+---
+
 ### 1) Data model
 
 **Events.**  
