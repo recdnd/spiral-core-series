@@ -46,12 +46,14 @@ Event streams accumulate fast. Traditional approaches face two critical limitati
 
 ## Quickstart
 
-**Requirements:** Python 3.10+
+Requirements: Python 3.10+
 
 ```bash
 git clone https://github.com/recdnd/spiral-core-series.git
 cd spiral-core-series
-python3 versions/spiral_core_v046_frontier-recent-k-fix.py
+python3 run.py
+```
+
 Expected output (shape):
 
 History size: ... (append-only)
@@ -61,7 +63,6 @@ History size: ... (append-only)
 == View: FRONTIER_RECENT_K_FIXED ... ==
 
 Invariant: no deletions, no edits. Only new events.
-```
 
 ---
 
@@ -154,7 +155,7 @@ spiral-core-series/
 ```bash
 git clone https://github.com/recdnd/spiral-core-series.git
 cd spiral-core-series
-make run
+python3 run.py
 ```
 
 **Expected output**:

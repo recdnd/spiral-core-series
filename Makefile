@@ -8,8 +8,8 @@ help:
 	@echo "  make run     # run latest prototype (v0.46)"
 	@echo "  make latest  # alias of run"
 
-run: $(LATEST)
-	$(PY) $(LATEST)
+run:
+	$(PY) run.py
 
 latest: run
 
